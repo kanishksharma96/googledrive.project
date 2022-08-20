@@ -1,4 +1,4 @@
-package com.oslashassignment.googledrive.project;
+package com.assignment.gdrive.plugin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

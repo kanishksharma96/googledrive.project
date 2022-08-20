@@ -1,4 +1,4 @@
-package com.oslashassignment.googledrive.project;
+package com.assignment.gdrive.plugin;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

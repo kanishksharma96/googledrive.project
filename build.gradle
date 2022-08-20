@@ -3,7 +3,6 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.13.RELEASE'
 	id 'java'
 }
-
 group = 'com.oslashassignment'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
@@ -16,6 +15,12 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//Google Dependencies
+	implementation 'com.google.api-client:google-api-client:1.33.0'
+	implementation 'com.google.oauth-client:google-oauth-client-jetty:1.32.1'
+	implementation 'com.google.apis:google-api-services-driveactivity:v2-rev20210319-1.32.1'
+
 }
 
 tasks.named('test') {
