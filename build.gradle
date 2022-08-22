@@ -13,13 +13,21 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    implementation 'junit:junit:4.13.1'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	//Google Dependencies
 	implementation 'com.google.api-client:google-api-client:1.33.0'
 	implementation 'com.google.oauth-client:google-oauth-client-jetty:1.32.1'
 	implementation 'com.google.apis:google-api-services-driveactivity:v2-rev20210319-1.32.1'
+
+	//lombok
+	compileOnly 'org.projectlombok:lombok:1.18.24'
+	annotationProcessor 'org.projectlombok:lombok:1.18.24'
+	// https://mvnrepository.com/artifact/junit/junit
+	testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+
 
 }
 

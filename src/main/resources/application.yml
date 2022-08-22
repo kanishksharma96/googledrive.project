@@ -1,0 +1,8 @@
+server:
+  port: 8090
+
+google:
+  drive:
+    poll.interval.ms: "5000"
+    batch:
+      processor.size: "10"
