@@ -6,3 +6,4 @@ google:
     poll.interval.ms: "5000"
     batch:
       processor.size: "10"
+    item.id: driveItemId

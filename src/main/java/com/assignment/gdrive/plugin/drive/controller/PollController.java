@@ -5,6 +5,7 @@ import com.assignment.gdrive.plugin.drive.service.DriveActivityService;
 import com.google.api.services.driveactivity.v2.model.DriveActivity;
 import com.google.api.services.driveactivity.v2.model.QueryDriveActivityRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,9 @@ import java.util.List;
 
 @RestController
 public class PollController {
+
+    @Value("${google.drive.item.id}")
+    private String driveItemId;
 
     private String latestEpochTs = String.valueOf(Instant.now().toEpochMilli());
 
@@ -45,7 +49,7 @@ public class PollController {
 
     private QueryDriveActivityRequest buildQueryDriveAcitivityRequest() {
         QueryDriveActivityRequest driveActivityRequest = new QueryDriveActivityRequest();
-        driveActivityRequest.setAncestorName("items/19f1MCEty9_mdDhR0B_IwVLcLYuk3vHVH");
+        driveActivityRequest.setAncestorName(String.format("items/%S", driveItemId));
         driveActivityRequest.setPageSize(20);
         driveActivityRequest.setFilter(buildQueryFilter());
         return driveActivityRequest;
